@@ -12,8 +12,9 @@ export const Header = styled.View`
   background-color: ${({ theme }) => theme.colors.primary} ;
   width:100%;
   height: ${RFPercentage(42)}px;
-  align-items: center;
-  justify-content: center ;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
 `
 
 export const UserWrapper = styled.View`
@@ -22,6 +23,8 @@ export const UserWrapper = styled.View`
   justify-content: space-between;
   width: 100%;
   padding: 0 34px;
+  margin-top: ${RFPercentage(5)}px;
+
 `
 export const UserInfo = styled.View`
   flex-direction: row ;
@@ -56,4 +59,14 @@ font-family: ${({ theme }) => theme.fonts.bold };
 export const PowerIcon = styled(Feather)`
   font-size: ${RFValue(28)}px;
   color: ${({ theme }) => theme.colors.secondary};
+`
+
+export const TopCardList = styled.ScrollView.attrs({
+  horizontal: true,
+  showsHorizontalScrollIndicator: false,
+  contentContainerStyle: { paddingHorizontal: 24 }
+})`
+  width: 100% ;
+  position: absolute;
+  margin-top: ${RFPercentage(20)}px;
 `
