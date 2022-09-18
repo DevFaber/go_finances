@@ -9,11 +9,14 @@ interface TypeCustomProps {
 export const Container = styled.View<TypeCustomProps>`
   background-color: ${({ theme, type }) => 
   type  === 'total' ? theme.colors.secondary : theme.colors.shape};
-  width: ${RFValue(300)}px ;
+  width: ${RFValue(330)}px ;
   border-radius: 7px ;
   padding: 19px 23px;
   padding-bottom: ${RFValue(42)}px;
   margin-right: 16px;
+  border-width: 1px;
+  border-color: ${({ theme, type }) => 
+  type  === 'total' ? theme.colors.secondary : theme.colors.primary};
 `
 
 export const Header = styled.View`
